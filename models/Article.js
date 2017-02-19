@@ -13,8 +13,12 @@ var ArticleSchema = new Schema({
 		type: String,
 		reuired: true
 	},
+	saved: {
+		type: Boolean,
+		default: false
+	},
 	// This saves on comment's ObjectId, ref refers to the Comment model
-	comment: {
+	comments: {
 		type: Schema.Types.ObjectId,
 		ref: "Comment"
 	}

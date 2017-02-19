@@ -1,1 +1,65 @@
-<p>This is just a test</p>
+{{!-- Navbar --}}
+<nav class="navbar navbar-default navbar-fixed-top">
+  <a class="navbar-brand" >Mongoose Scraper</a>
+  <ul class="nav navbar-nav">
+    <li class="active"><a href="/home">Home <span class="sr-only">(current)</span></a></li>
+    <li><a href="/savedArticles">Saved Articles</a></li>
+    <button id="scrapeNewArticles" type="button" class="btn btn-success" data-toggle="modal" data-target="#scrapeModal" aria-hiden="true">SCRAPE NEW ARTICLES</button>
+</ul>
+</nav>
+
+<!-- Modal -->
+<div class="modal fade" id="scrapeModal" tabindex="-1">
+  <div class="modal-dialog">
+
+  {{!-- modal content --}}
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Scraped Articles</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" onClick="window.location.reload()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        50 articles scraped
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" onClick="window.location.reload()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{!-- main image div --}}
+<div class="mainImage">
+    <div id="centerTitle">
+        <h1>Mongoose Scraper</h1>
+        <h3>The Verge Edition</h3>
+    </div>
+</div>
+<br>
+<br>
+
+<div class="articles">
+  {{!-- pannels for each article --}}
+  <ul>
+    {{#each articles}}
+    <li id="articlesLi">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title">{{this.title}}</h3>
+          {{!-- <div id="articleButtons"> --}}
+          <button type="button" class="btn btn-success" id="saveArticleButton" data="{{this._id}}" onClick="window.location.reload()">SAVE ARTICLE</button>
+          {{!-- </div> --}}
+        </div>
+        <div class="panel-body">
+          {{this.link}}
+        </div>
+      </div>
+    </li>
+    {{/each}}
+  </ul>
+</div>
+
+
+

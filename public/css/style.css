@@ -1,0 +1,53 @@
+.mainImage {
+	background-image: url("http://www.quidsit.com/wp-content/uploads/2016/10/SEO-Talent-vs-Technology.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 700px;
+}
+
+h1 {
+	font-size: 60px;
+}
+
+.navbar {
+	margin-bottom:0;
+}
+
+#centerTitle {
+	text-align:center;
+	padding-top: 400px;
+	color: white;
+	text-shadow: 2px 2px 2px black;
+}
+
+#saveArticleButton {
+	display: inline-block;
+	float:right;
+}
+
+.btn-success {
+	margin-top: 8px;
+}
+
+.panel-info {
+	margin: 15px;
+}
+
+.panel-heading {
+	width:100%;
+	display:inline-block;
+}
+.panel-title {
+	display:inline-block;
+	font-size:30px;
+}
+
+.modal-title {
+	color: black;
+}
+
+#articlesLi {
+	list-style: none;
+}
+

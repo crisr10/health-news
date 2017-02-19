@@ -5,10 +5,6 @@ var Schema = mongoose.Schema;
 
 // create the Comment schema
 var CommentSchema = new Schema ({
-	// commenet title
-	title: {
-		type: String
-	},
 	body: {
 		type: String
 	}
