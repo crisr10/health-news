@@ -144,10 +144,10 @@ module.exports = function(app) {
 
 				.exec(function(err, newDoc){
 					if (err) {
-						res.send(err);
+						console.log(err);
 					}
 					else {
-						res.send(newDoc);
+						console.log(newDoc);
 					}
 				});
 			}

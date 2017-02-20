@@ -21,7 +21,7 @@ h1 {
 	text-shadow: 2px 2px 2px black;
 }
 
-#saveArticleButton {
+.saveArticleButton {
 	display: inline-block;
 	float:right;
 }

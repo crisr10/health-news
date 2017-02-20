@@ -19,10 +19,10 @@
   <div class="panel-heading">
     <h3 class="panel-title">{{this.title}}</h3>
     <div id="savedArticleButtons">
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#notesModal" data="{{this._id}}" aria-hidden="true">ARTICLE NOTES</button>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#commentsModal" data="{{this._id}}" aria-hidden="true">ARTICLE NOTES</button>
 
       <!-- Modal -->
-      <div id="notesModal" class="modal fade" role="dialog">
+      <div id="commentsModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
 
           <!-- Modal content-->
@@ -39,18 +39,18 @@
             {{/each}}
             </ul>
 
-              <input type="hidden" value={{this.id}} id="articleId" />
-              <textarea type="text" class="form-control" placeholder="Add comment here" id="commentBody"></textarea>
+              <input type="hidden" value={{this.id}} class="articleId"/>
+              <textarea type="text" class="form-control commentBody" placeholder="Add comment here"></textarea>
             </div>
             <div class="modal-footer">
-              <button type="submit" class="btn btn-default" data-dismiss="modal" id="commentSubmit">Submit</button>
+              <button type="submit" class="btn btn-default commentSubmit" data-dismiss="modal">Submit</button>
             </div>
           </div>
 
         </div>
       </div>
 
-      <button type="submit" class="btn btn-danger" data="{{this._id}}" id="deleteFromSaved" onClick="window.location.reload()">DELETE FROM SAVED</button>
+      <button type="submit" class="btn btn-danger deleteFromSaved" data="{{this._id}}">DELETE FROM SAVED</button>
     </div>
 </div>
 <div class="panel-body">

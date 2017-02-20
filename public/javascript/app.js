@@ -11,7 +11,7 @@ $("#scrapeNewArticles").on("click", function(){
 });
 
 // Save article and send data to the /save route
-$("#saveArticleButton").on("click", function() {
+$(".saveArticleButton").on("click", function() {
 
 	$.ajax({
 		method: "PUT",
@@ -22,11 +22,12 @@ $("#saveArticleButton").on("click", function() {
 	})
 	.done(function(data) {
 		console.log(data);
+		window.location.href = data.redirect;
 	});
 });
 
 // Delete article from saved and send data to the /deleteFromSaved route
-$("#deleteFromSaved").on("click", function() {
+$(".deleteFromSaved").on("click", function() {
 
 	$.ajax({
 		method: "PUT",
@@ -37,26 +38,38 @@ $("#deleteFromSaved").on("click", function() {
 	})
 	.done(function(data) {
 		console.log(data);
+		window.location.href = data.redirect;
 	});
 });
 
-$("#commentSubmit").on("click", function() {
+$(".commentSubmit").on("click", function() {
 
-	var articleId = $("#articleId").val();
+	var articleId = $(".articleId").val();
+	console.log(articleId);
+	console.log($(".commentBody").val());
 
 	$.ajax({
 		method: "POST",
 		url: "/articles/"+articleId,
 		data: {
-			body: $("#commentBody").val()
+			body: $(".commentBody").val()
 		}
 	})
 	.done(function(data) {
-		$("#commentBody").empty();
+		$(".commentBody").empty();
 		console.log(data);
 
 	});
 });
+
+$(".close").on("click", function() {
+	location.href = "/home";
+});
+
+$(".modal").on("hidden.bs.modal", function(){
+    $(".modal-body1").html("");
+});
+
 
 
 

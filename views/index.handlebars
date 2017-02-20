@@ -16,7 +16,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Scraped Articles</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" onClick="window.location.reload()">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -24,7 +24,7 @@
         50 articles scraped
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal" onClick="window.location.reload()">Close</button>
+        <button type="button" class="btn btn-secondary close" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
@@ -49,7 +49,7 @@
         <div class="panel-heading">
           <h3 class="panel-title">{{this.title}}</h3>
           {{!-- <div id="articleButtons"> --}}
-          <button type="button" class="btn btn-success" id="saveArticleButton" data="{{this._id}}" onClick="window.location.reload()">SAVE ARTICLE</button>
+          <button type="button" class="btn btn-success saveArticleButton" data="{{this._id}}">SAVE ARTICLE</button>
           {{!-- </div> --}}
         </div>
         <div class="panel-body">
