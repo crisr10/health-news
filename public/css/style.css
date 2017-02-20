@@ -21,9 +21,8 @@ h1 {
 	text-shadow: 2px 2px 2px black;
 }
 
-.saveArticleButton {
-	display: inline-block;
-	float:right;
+.saveArticleButton, .btn {
+	margin:10px 0;
 }
 
 .btn-success {
@@ -36,10 +35,8 @@ h1 {
 
 .panel-heading {
 	width:100%;
-	display:inline-block;
 }
 .panel-title {
-	display:inline-block;
 	font-size:30px;
 }
 
