@@ -25,7 +25,7 @@ app.use(methodOverride("_method"));
 // Make the public file a static dir
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost/techNews");
+mongoose.connect("mongodb://heroku_g5wsrpwk:sh92me1f2t3133542spj2frlun@ds157529.mlab.com:57529/heroku_g5wsrpwk");
 var db = mongoose.connection;
 
 // Show any mongoose errors
