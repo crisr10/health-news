@@ -1,5 +1,5 @@
 {
-  "name": "health-news",
+  "name": "tech-news-scraper",
   "version": "1.0.0",
   "description": "News scraper with mongoose and cheerio",
   "main": "server.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/crisr10/health-news.git"
+    "url": "git+https://github.com/crisr10/tech-news-scraper.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/crisr10/health-news/issues"
+    "url": "https://github.com/crisr10/tech-news-scraper/issues"
   },
-  "homepage": "https://github.com/crisr10/health-news#readme",
+  "homepage": "https://github.com/crisr10/tech-news-scraper#readme",
   "dependencies": {
     "bluebird": "^3.4.7",
     "body-parser": "^1.16.1",
