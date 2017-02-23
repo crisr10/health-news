@@ -58,17 +58,22 @@ $(".commentSubmit").on("click", function() {
 	.done(function(data) {
 		$(".commentBody").empty();
 		console.log(data);
-
+		window.location.href = data.redirect;
 	});
 });
 
-$(".close").on("click", function() {
+$(".closeScrapeModal").on("click", function() {
 	location.href = "/home";
+});
+
+$(".closeCommentModal").on("click", function() {
+	location.href = "/savedArticles";
 });
 
 $(".modal").on("hidden.bs.modal", function(){
     $(".modal-body1").html("");
 });
+
 
 
 

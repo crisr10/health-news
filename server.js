@@ -28,7 +28,7 @@ app.use(express.static("public"));
 // mongoose.connect("mongodb://heroku_g5wsrpwk:sh92me1f2t3133542spj2frlun@ds157529.mlab.com:57529/heroku_g5wsrpwk");
 // var db = mongoose.connection;
 
-mongoose.connect("mongodb://localhost/techNews");
+mongoose.connect(" mongodb://heroku_jpplznvq:nd9vbe9tu94ppjstmol5v7jfr@ds161049.mlab.com:61049/heroku_jpplznvq");
 var db = mongoose.connection;
 
 // Show any mongoose errors
