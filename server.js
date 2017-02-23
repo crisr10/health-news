@@ -3,7 +3,6 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
-var methodOverride = require("method-override");
 
 // Mongoose mpromise deprecated - use bluebird promises
 var Promise = require("bluebird");
@@ -18,9 +17,6 @@ app.use(logger("dev"));
 app.use(bodyParser.urlencoded({
 	extended: false
 }));
-
-// Override with POST having ?_method=DELETE
-app.use(methodOverride("_method"));
 
 // Make the public file a static dir
 app.use(express.static("public"));
