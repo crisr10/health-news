@@ -8,6 +8,7 @@ var mongoose = require("mongoose");
 var Promise = require("bluebird");
 mongoose.Promise = Promise;
 
+var PORT = process.env.PORT || 3000
 
 // Initialize express
 var app = express();
@@ -21,11 +22,11 @@ app.use(bodyParser.urlencoded({
 // Make the public file a static dir
 app.use(express.static("public"));
 
-// mongoose.connect("mongodb://heroku_g5wsrpwk:sh92me1f2t3133542spj2frlun@ds157529.mlab.com:57529/heroku_g5wsrpwk");
-// var db = mongoose.connection;
-
-mongoose.connect("mongodb://heroku_jpplznvq:nd9vbe9tu94ppjstmol5v7jfr@ds161049.mlab.com:61049/heroku_jpplznvq");
+mongoose.connect("mongodb://heroku_g5wsrpwk:sh92me1f2t3133542spj2frlun@ds157529.mlab.com:57529/heroku_g5wsrpwk");
 var db = mongoose.connection;
+
+// mongoose.connect("mongodb://localhost/techNews");
+// var db = mongoose.connection;
 
 // Show any mongoose errors
 db.on("error", function(error){
@@ -47,7 +48,7 @@ app.set("view engine", "handlebars");
 require("./routes/articles-api-routes.js")(app);
 
 // Listen on port 3000
-app.listen(3000, function() {
+app.listen(PORT, function() {
   console.log("App running on port 3000!");
 });
 
